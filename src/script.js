@@ -120,9 +120,9 @@ const getGalexy = (color, numOfstars, size) => {
     return new THREE.Points(particlesGeo, material)
 }
 
-const purpleStars = getGalexy('0xff7743', 5000, 0.007)
-const blueStars = getGalexy('0x447743', 3000, 0.008)
-const redStars = getGalexy('0x85743', 4000, 0.001)
+const purpleStars = getGalexy(0xffffff, 50, 0.04)
+const blueStars = getGalexy(0xffffff, 100, 0.08)
+const redStars = getGalexy(0xffffff, 200, 0.07)
 
 purpleStars.scale.set(22, 12, 32)
 blueStars.scale.set(12, 22, 82)
@@ -177,7 +177,7 @@ window.addEventListener('resize', () => {
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
 camera.position.x = 0
 camera.position.y = 0
-camera.position.z = 30
+camera.position.z = 20
 scene.add(camera)
 
 //! Controls
