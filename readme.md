@@ -1,7 +1,7 @@
-# Three.js Starter
-Courtesy of Bruno Simon of https://threejs-journey.xyz/
+# Project Credits
+Created by [aceasad](https://github.com/aceasad) & [7WA7N](https://github.com/7WA7N)
 
-## Setup
+## Settting up the project
 Download [Node.js](https://nodejs.org/en/download/).
 Run this followed commands:
 
