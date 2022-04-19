@@ -101,7 +101,7 @@ const getGalexy = (color, numOfstars, size) => {
     const particlesCount = numOfstars;
 
     const posArray = new Float32Array(particlesCount * 3);
-    for (let i = 0; i < particlesCount * 3; i++) {
+    for (let i = 0; i < particlesCount * 5; i++) {
         posArray[i] = Math.random() - 0.5
     }
 
@@ -120,9 +120,9 @@ const getGalexy = (color, numOfstars, size) => {
     return new THREE.Points(particlesGeo, material)
 }
 
-const purpleStars = getGalexy(0xffffff, 50, 0.04)
-const blueStars = getGalexy(0xffffff, 100, 0.08)
-const redStars = getGalexy(0xffffff, 200, 0.07)
+const purpleStars = getGalexy(0xffffff, 50, 0.1)
+const blueStars = getGalexy(0xffffff, 100, 0.1)
+const redStars = getGalexy(0xffffff, 200, 0.1)
 
 purpleStars.scale.set(22, 12, 32)
 blueStars.scale.set(12, 22, 82)
@@ -200,7 +200,7 @@ const tick = () => {
     const elapsedTime = clock.getElapsedTime()
     StarGroup.rotation.y = 1.0 * elapsedTime
     StarGroup.rotation.x = 1.0 * elapsedTime
-    StarGroup.rotation.z = 1.0 * elapsedTime
+    StarGroup.rotation.z = 5.0 * elapsedTime
 
     //! Update objects
     //sphere.rotation.y = 1.0 * elapsedTime
