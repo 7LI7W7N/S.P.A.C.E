@@ -90,7 +90,7 @@ const atmosphere = new THREE.Mesh(
         side: THREE.BackSide
     })
 )
-atmosphere.scale.set(1.2, 1.2, 1.2)
+atmosphere.scale.set(1.5, 1.5, 1.5)
 
 //Get Stary Stars in your color babes
 const getGalexy = (color, numOfstars, size) => {
@@ -100,9 +100,9 @@ const getGalexy = (color, numOfstars, size) => {
     const particlesGeo = new THREE.BufferGeometry;
     const particlesCount = numOfstars;
 
-    const posArray = new Float32Array(particlesCount * 3);
+    const posArray = new Float32Array(particlesCount * 5);
     for (let i = 0; i < particlesCount * 5; i++) {
-        posArray[i] = Math.random() - 0.5
+        posArray[i] = Math.random() - 0.5;
     }
 
     particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3))
@@ -120,7 +120,7 @@ const getGalexy = (color, numOfstars, size) => {
     return new THREE.Points(particlesGeo, material)
 }
 
-const purpleStars = getGalexy(0xffffff, 50, 0.1)
+const purpleStars = getGalexy(0xffffff, 100, 0.1)
 const blueStars = getGalexy(0xffffff, 100, 0.1)
 const redStars = getGalexy(0xffffff, 200, 0.1)
 
@@ -177,7 +177,7 @@ window.addEventListener('resize', () => {
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
 camera.position.x = 0
 camera.position.y = 0
-camera.position.z = 20
+camera.position.z = 30
 scene.add(camera)
 
 //! Controls
