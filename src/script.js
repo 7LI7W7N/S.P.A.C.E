@@ -2,7 +2,7 @@ import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
-import globle from '../assets/images/Globe.jpeg'
+
 //Shaders 
 var vertexShader = `
     varying vec2 vertexUV;
